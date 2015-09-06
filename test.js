@@ -43,8 +43,9 @@ describe('twelve-to-twentyfour', function(){
 
     it('should honor one space after the time', function(){
         assert.equal(twentyfour('1:01 PM'), '13:01');
+        assert.equal(twentyfour('1:01PM'), '13:01');
         assert.throws(function(){
-            twentyfour("12:00  AM"); // two spaces fails
+            twentyfour("12:00  AM"); // two spaces fail
         });
     });
 
