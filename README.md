@@ -1,4 +1,4 @@
-# twelve-to-twentyfour
+# twelve-to-twentyfour [![Build Status](https://travis-ci.org/radiovisual/twelve-to-twentyfour.svg)](https://travis-ci.org/radiovisual/twelve-to-twentyfour)
 > Convert 12-hour time strings into 24-hour time strings.
 
 ## Install
