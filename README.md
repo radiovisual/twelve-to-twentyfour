@@ -18,6 +18,9 @@ twentyfour("1:01 PM");
 twentyfour("12:04 AM");
 // => "00:04"
 
+twentyfour("4:04:04 PM");
+// => "16:04:04"
+
 ```
 
 ## Notes

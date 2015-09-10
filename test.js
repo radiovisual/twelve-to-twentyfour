@@ -100,7 +100,7 @@ describe('twelve-to-twentyfour', function(){
         assert.equal(twentyfour('1:01 PM'), '13:01');
         assert.equal(twentyfour('2:59 PM'), '14:59');
         assert.equal(twentyfour('3:12 PM'), '15:12');
-        assert.equal(twentyfour('4:00 PM'), '16:00');
+        assert.equal(twentyfour('4:04:04 PM'), '16:04:04');
         assert.equal(twentyfour('5:00 PM'), '17:00');
         assert.equal(twentyfour('6:12 PM'), '18:12');
         assert.equal(twentyfour('7:22 PM'), '19:22');
