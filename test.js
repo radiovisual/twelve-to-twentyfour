@@ -77,7 +77,8 @@ describe('twelve-to-twentyfour', function(){
         assert.equal(twentyfour('9:59 PM'), '21:59');
         assert.equal(twentyfour('10:59 PM'), '22:59');
         assert.equal(twentyfour('11:04 PM'), '23:04');
-        assert.equal(twentyfour('12:04 AM'), '00:04');
+        assert.equal(twentyfour('12:04AM'), '00:04');
+        assert.equal(twentyfour('12:00AM'), '00:00');
     });
 
 
