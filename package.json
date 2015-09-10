@@ -1,6 +1,6 @@
 {
   "name": "twelve-to-twentyfour",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Convert 12-hour time strings into 24-hour time strings.",
   "main": "index.js",
   "scripts": {
@@ -29,5 +29,8 @@
   "homepage": "https://github.com/radiovisual/twelve-to-twentyfour#readme",
   "devDependencies": {
     "mocha": "^2.3.0"
+  },
+  "dependencies": {
+    "simple-zeropad": "^1.0.3"
   }
 }

@@ -17,6 +17,19 @@ describe('twelve-to-twentyfour', function(){
         });
     });
 
+    it('should error with incorrect 24-hour format', function(done){
+        assert.throws(function(){
+            twentyfour("00:00:85");
+        });
+        assert.throws(function(){
+            twentyfour("00:85:00");
+        });
+        assert.throws(function(){
+            twentyfour("85:00:00");
+        });
+        done();
+    });
+
     it('should error with incorrect format: no colon', function(){
         assert.throws(function(){
             twentyfour("000000AM");
@@ -29,8 +42,22 @@ describe('twelve-to-twentyfour', function(){
         });
     });
 
+    it('should error with incorrect seconds', function(){
+        assert.throws(function(){
+            twentyfour("1:00:89 AM");
+        });
+    });
+
     it('should allow 24-hour strings to pass unchanged', function(){
         assert.equal(twentyfour("00:00"), '00:00');
+    });
+
+    it('should allow 24-hour strings with seconds to pass unchanged', function(){
+        assert.equal(twentyfour("10:10:10"), '10:10:10');
+    });
+
+    it('should allow 12-hour strings with seconds', function(){
+        assert.equal(twentyfour("10:10:01 PM"), '22:10:01');
     });
 
     it('should error if hours is greater than 12', function(){
