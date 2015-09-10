@@ -23,10 +23,14 @@ describe('twelve-to-twentyfour', function(){
         });
     });
 
-    it('should error with incorrect format: missing AM or PM', function(){
+    it('should error with incorrect format: no am or pm', function(){
         assert.throws(function(){
-            twentyfour("00:00");
+            twentyfour("1:00");
         });
+    });
+
+    it('should allow 24-hour strings to pass unchanged', function(){
+        assert.equal(twentyfour("00:00"), '00:00');
     });
 
     it('should error if hours is greater than 12', function(){

@@ -1,6 +1,6 @@
 {
   "name": "twelve-to-twentyfour",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Convert 12-hour time strings into 24-hour time strings.",
   "main": "index.js",
   "scripts": {

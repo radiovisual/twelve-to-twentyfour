@@ -6,6 +6,18 @@ module.exports = function(str, opts) {
         throw new TypeError('Expected a string');
     }
 
+    // Allow strings already in the 24-hour format to pass through
+    var reg24 = /^[0-9]{2}:[0-9]{2}$/;
+
+    if (reg24.test(str)) {
+
+        str.split(':').map(function (i) { parseInt(i, 10); });
+
+        if (str[0] < 24 && str[1] < 60) {
+            return str;
+        }
+    }
+
     // valid strings: '0:00AM' || '0:00 AM' || '00:00PM' || '00:00 PM'
     if ((str.length < 6 || str.length > 8)) {
         throw new SyntaxError('Invalid time string format. Use `0:00XX` || `0:00 XX` || `00:00XX` || `00:00 XX`');
