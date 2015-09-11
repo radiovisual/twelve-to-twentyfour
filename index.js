@@ -1,12 +1,16 @@
 'use strict';
 
 var zp = require('simple-zeropad');
+var trim = require('trim');
 
 module.exports = function(str, opts) {
 
     if (typeof str !== 'string') {
         throw new TypeError('Expected a string');
     }
+
+    // remove whitespace
+    str = trim(str);
 
     // Allow strings already in the 24-hour format to pass through
     var reg24 = /^[0-9]{2}:[0-9]{2}(:[0-9]{2})?$/;

@@ -11,6 +11,10 @@ describe('twelve-to-twentyfour', function(){
         });
     });
 
+    it('should remove whitespace', function(){
+        assert.equal(twentyfour("    1:01:01 PM    "), '13:01:01');
+    });
+
     it('should error with incorrect format: incorrect length', function(){
         assert.throws(function(){
             twentyfour("000:000AM");
