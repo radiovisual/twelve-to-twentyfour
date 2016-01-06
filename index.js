@@ -78,39 +78,13 @@ module.exports = function(str, opts) {
         }
 
     } else if (ampm === 'PM') {
-
-        switch (hour) {
-            case  1:
-                return makeTimeString(13, mins, secs);
-            case  2:
-                return makeTimeString(14, mins, secs);
-            case  3:
-                return makeTimeString(15, mins, secs);
-            case  4:
-                return makeTimeString(16, mins, secs);
-            case  5:
-                return makeTimeString(17, mins, secs);
-            case  6:
-                return makeTimeString(18, mins, secs);
-            case  7:
-                return makeTimeString(19, mins, secs);
-            case  8:
-                return makeTimeString(20, mins, secs);
-            case  9:
-                return makeTimeString(21, mins, secs);
-            case 10:
-                return makeTimeString(22, mins, secs);
-            case 11:
-                return makeTimeString(23, mins, secs);
-            case 12:
-                return makeTimeString(12, mins, secs);
-        }
-
+        var newHour = hour === 12 ? 12 : hour + 12;
+        return makeTimeString(newHour, mins, secs);
     }
 };
 
 
-function makeTimeString(hour, mins, secs){
+function makeTimeString(hour, mins, secs) {
     var s = "";
     if (secs) { s = ":"+zp(secs); }
     return zp(hour)+":"+zp(mins)+s;
