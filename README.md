@@ -1,5 +1,5 @@
 # twelve-to-twentyfour [![Build Status](https://travis-ci.org/radiovisual/twelve-to-twentyfour.svg)](https://travis-ci.org/radiovisual/twelve-to-twentyfour)
-> Convert 12-hour time strings into 24-hour time strings.
+> Convert 12-hour time strings into 24-hour time strings. `02:00 PM` → `14:00`
 
 ## Install
 
@@ -33,6 +33,10 @@ This module can accept time strings in the following formats:
 - `0:00 XX`
 
 Where `XX` equals a case-insensitive `AM` or `PM`.
+
+## Related 
+
+- [twentyfour-to-twelve](https://github.com/radiovisual/twentyfour-to-twelve) Convert 24-hour time strings into 12-hour time strings. `14:00` → `02:00 PM`
 
 ## License
 
