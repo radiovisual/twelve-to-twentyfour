@@ -1,7 +1,7 @@
 {
   "name": "twelve-to-twentyfour",
   "version": "1.0.0",
-  "description": "Convert 12-hour time strings into 24-hour time strings.",
+  "description": "Convert 12-hour time strings into 24-hour time strings. 02:00 PM → 14:00",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
