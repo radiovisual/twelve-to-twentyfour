@@ -15,11 +15,16 @@
     "12",
     "24",
     "twenty-four",
+    "twentyfour",
     "covert",
     "conversion",
     "time",
+    "change",
+    "clock",
+    "strings",
     "string",
-    "hour"
+    "hour",
+    "hours"
   ],
   "author": "Michael Wuergler <senjudev@gmail.com> (http://numetriclabs.com)",
   "license": "MIT",
