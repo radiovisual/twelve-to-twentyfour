@@ -40,12 +40,6 @@ describe('twelve-to-twentyfour', function(){
         });
     });
 
-    it('should error with incorrect format: no am or pm', function(){
-        assert.throws(function(){
-            twentyfour("1:00");
-        });
-    });
-
     it('should error with incorrect seconds', function(){
         assert.throws(function(){
             twentyfour("1:00:89 AM");
@@ -114,6 +108,10 @@ describe('twelve-to-twentyfour', function(){
         assert.equal(twentyfour('11:04 PM'), '23:04');
         assert.equal(twentyfour('12:04AM'), '00:04');
         assert.equal(twentyfour('12:00AM'), '00:00');
+    });
+
+    it('should allow the pattern of 0:00', function(){
+        assert.equal(twentyfour('9:30'), '09:30');
     });
 
 
